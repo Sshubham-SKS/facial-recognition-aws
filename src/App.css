@@ -1,38 +1,91 @@
+/* Main container animation */
 .App {
-  text-align: center;
+    margin-top: 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Adjust Upload Message */
+.upload-message {
+    margin-top: 1rem;  /* Push it a little down */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Center the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Ensures proper spacing */
+    margin-top: 2.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Success message with pulse animation */
+.success, .failure {
+    margin-top: 1rem; /* Push the message below the image */
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    width: 80%;
+    max-width: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.success {
+    color: green;
+    border: 2px solid green;
+    animation: pulse 1.5s infinite alternate;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.failure {
+    color: red;
+    border: 2px solid red;
+    animation: shake 0.5s ease-in-out;
+}
+
+/* File input styling */
+input[type="file"] {
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 2px dashed #aaa;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+    border-color: #4CAF50;
+    background-color: #f8f8f8;
+}
+
+/* Button animation */
+button {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    color: white;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #45a049, #4CAF50);
+}
+
+/* Image styling */
+img {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    padding: 25px;
+}
+
+img:hover {
+    transform: scale(1.1);
 }
