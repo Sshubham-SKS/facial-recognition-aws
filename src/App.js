@@ -241,7 +241,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Felix's Facial Recognition System</h2>
+      <h2>Sks's Facial Recognition System</h2>
       <form onSubmit={sendImage}>
         <input 
           type="file" 
